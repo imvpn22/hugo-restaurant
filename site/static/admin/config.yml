@@ -3,7 +3,9 @@ backend:
   repo: imvpn22/hugo-restaurant # Path to your Github repository
   branch: master # Branch to update
 
-  media_folder: "src/img/gallery" # Media files will be stored in the repo under images/uploads
+  media_folder: "../images/uploads" # Media files will be stored in the repo 
+
+  publish_mode: editorial_workflow
 
   collections:
   - name: food # Used in routes, e.g., /admin/collections/food
