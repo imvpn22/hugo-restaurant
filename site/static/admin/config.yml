@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: imvpn22/hugo-restaurant # Path to your Github repository
+  branch: master # Branch to update
+
+  media_folder: "src/img/gallery" # Media files will be stored in the repo under images/uploads
+
+  collections:
+  - name: food # Used in routes, e.g., /admin/collections/food
+    label: "Food Item" # Used in the UI
+    folder: "site/content/food" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields for each document, usually in front matter
+      - {label: "Name of Item", name: "title", widget: "string"}
+      - {label: "Supported Meals", name: "categories", widget: "list", default: ["lunch", "dinner"]}
+      - {label: "Ingredients/Description", name: "description", widget: "text"}
+      - {label: "Type of food", name: "type", widget: "string", default: "raw bar"}
+      - {label: "Price", name: "price", widget: "string"}
+
