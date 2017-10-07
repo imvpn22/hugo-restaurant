@@ -15,6 +15,16 @@ collections:
     - {label: "Type of food", name: "type", widget: "string", default: "raw bar"}
     - {label: "Price", name: "price", widget: "string"}
 
+- name: drinks
+  label: "Drink Item"
+  folder: "site/content/drinks"
+  create: true
+  fields:
+    - {label: "Name of Item", name: "title", widget: "string"}
+    - {label: "Supported Meals", name: "categories", widget: "list"}
+    - {label: "Ingredients/Description", name: "description", widget: "text"}
+    - {label: "Price", name: "price", widget: "string"}
+
 publish_mode: editorial_workflow
 
 media_folder: "src/img/gallery" # Media files will be stored in the repo
